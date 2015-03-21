@@ -26,7 +26,7 @@ package
 			//var game:Game1 = new Game1();
 			//addChild(game);
 			
-			var loader:UtilLoader = new UtilLoader("assets.swf", startGame);
+			var loader:UtilLoader = new UtilLoader("../assets.swf", startGame);
 		}
 		
 		private function startGame():void

@@ -1,5 +1,6 @@
 # Build and Release Folders
-bin/
+#bin/
+bin/runnable/
 bin-debug/
 bin-release/
 
