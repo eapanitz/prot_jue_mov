@@ -8,14 +8,23 @@ package utilFramework.objets
 	
 	public class GameObject extends Sprite
 	{
+		//Atributos de visualizacion
 		protected var skin:Sprite;
-		protected var speedX:int;
-		protected var speedY:int;
 		protected var assetClass:Class;
-		
-		protected var bounceType:String;
+		//Atributos de movimiento
 		protected var limitX:Number;
 		protected var limitY:Number;
+		protected var speedX:int;
+		protected var speedY:int;				
+		protected var directionX:int;
+		protected var directionY:int;
+		protected var bounceType:String;
+		protected var moveType:String;
+		//Atributos de uso de teclado y mouse
+		protected var hasKeyboardEnabled:Boolean;
+		protected var keyboardFunction:Function;
+		protected var hasMouseEnabled:Boolean;
+		
 		
 		public function GameObject()
 		{
@@ -32,7 +41,6 @@ package utilFramework.objets
 		
 		public function init():void
 		{
-		
 		}
 		
 		public function create():void
@@ -43,8 +51,13 @@ package utilFramework.objets
 		
 		public function update():void
 		{
+			if (hasKeyboardEnabled) {
+				if (keyboardFunction != null) {
+					keyboardFunction();
+				}
+			}
 			//x += 1;
-			
+			/*
 			if (true)
 			{
 				x += speedX;
@@ -55,7 +68,7 @@ package utilFramework.objets
 				x -= speedX;
 				y -= speedY;
 			}
-			
+			*/
 			if (bounceType == "none")
 			{
 				//do nothing
@@ -81,6 +94,16 @@ package utilFramework.objets
 			{
 				removeChild(skin);
 			}
+		}
+		
+		private function moveX():void
+		{
+			x += speedX * directionX;
+		}
+		
+		private function moveY():void
+		{
+			y += speedY * directionY;
 		}
 		
 		private function bounceX():void
