@@ -1,0 +1,8 @@
+Pregunta 1:
+
+loader.contentLoaderInfo.addEventListener(Event.COMPLETE,onComplete);
+
+Pregunta 2:
+
+El movieclip tiene una linea de tiempo (fotogramas), y el sprite es solo un 
+grafico estatico (solo 1 fotograma)
