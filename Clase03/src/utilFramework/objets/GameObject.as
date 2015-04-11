@@ -18,8 +18,8 @@ package utilFramework.objets
 		protected var speedY:int;				
 		protected var directionX:int;
 		protected var directionY:int;
-		protected var bounceType:String;
-		protected var moveType:String;
+		protected var bounceType:String; //none, bounceX, bounceY, bounceXY
+		protected var moveType:String; //none, moveX, moveY, moveXY
 		//Atributos de uso de teclado y mouse
 		protected var hasKeyboardEnabled:Boolean;
 		protected var keyboardFunction:Function;
@@ -54,6 +54,18 @@ package utilFramework.objets
 			if (hasKeyboardEnabled) {
 				if (keyboardFunction != null) {
 					keyboardFunction();
+				}
+			}
+			if (moveType == "none") {
+				//do nothing
+			} else {
+				if (moveType == "moveX") {
+					moveX();
+				} else if (moveType == "moveY") {
+					moveY();
+				} else if (moveType == "moveXY") {
+					moveX();
+					moveY();
 				}
 			}
 			//x += 1;

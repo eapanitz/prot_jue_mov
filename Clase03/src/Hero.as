@@ -21,6 +21,9 @@ package
 			speedX = 4;			
 			assetClass = UtilLoader.getAsset("mc_knight");
 			bounceType = "bounceX";
+			moveType = "moveX";
+			directionX = 1;
+			directionY = -1;
 		}
 		
 		override public function init():void {

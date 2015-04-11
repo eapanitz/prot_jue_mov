@@ -34,7 +34,7 @@ package
 			hero = new Hero();
 			dragon = new Dragon();
 			addChild(hero);
-			addChild(dragon);			
+			addChild(dragon);
 			UtilKeyboard.init(stage);
 			UtilMouse.init(stage);
 			stage.addEventListener(Event.ENTER_FRAME, loop);

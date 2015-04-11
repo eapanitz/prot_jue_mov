@@ -22,6 +22,9 @@ package
 			speedY = 5;
 			assetClass = UtilLoader.getAsset("mc_dragon");
 			bounceType = "bounceXY";
+			moveType = "moveXY";
+			directionX = -1;
+			directionY = 1;
 		}
 		
 		override public function init():void {
